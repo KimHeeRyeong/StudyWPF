@@ -23,6 +23,37 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtChange_Click(object sender, RoutedEventArgs e)
+        {
+            this.btChange.Content = "눌렀다!";
+        }
+
+        private void BtEnter_Click(object sender, RoutedEventArgs e)
+        {
+            this.btEnter.Content = this.tbName.Text;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            TestWindow window = new TestWindow();
+            bool? check = window.ShowDialog();//show는 새창 show dialog는 종속]
+            if (check==true)
+            {
+                this.tbName.Text = window.btName.Content.ToString();
+            }
+            else
+            {
+            }
+            
         }
     }
 }
