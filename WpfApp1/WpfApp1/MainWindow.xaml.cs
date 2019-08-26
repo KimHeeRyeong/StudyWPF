@@ -37,6 +37,7 @@ namespace WpfApp1
             Button btn = (Button)sender;
             if (preOperator == '0')
             {
+                
                 nowNumStr += btn.Content.ToString();
                 result = float.Parse(nowNumStr);
                 this.tbResult.Text = (result).ToString();

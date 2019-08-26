@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="계산기" Height="360" Width="270">
     <Grid Background="#FFD9E4F1">
+        
         <Button x:Name="btDot" Content="." HorizontalAlignment="Left" Margin="110,0,0,10" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="5">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
