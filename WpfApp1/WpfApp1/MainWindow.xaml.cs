@@ -106,7 +106,7 @@ namespace WpfApp1
         {
             Button btn = (Button)sender;
             preOperator = '0';
-            this.tbResult.Text = "";
+            this.tbResult.Text = "0";
             this.tbCal.Text = "";
             preNumStr = "";
             nowNumStr = "";
