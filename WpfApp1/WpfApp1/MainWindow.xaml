@@ -5,13 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="계산기" Height="450" Width="270">
     <Grid>
-        <Button x:Name="btClose" Content="x" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top" Width="30" Click="Button_Click"/>
-        <Button x:Name="btChange" Content="Button" HorizontalAlignment="Center"  Margin="0,300,0,0" VerticalAlignment="Top" Width="60" Click="BtChange_Click"/>
-        <Button x:Name="btEnter" Content="Enter" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Width="60" Click="BtEnter_Click" />
-        <TextBox x:Name="tbName" HorizontalAlignment="Center" Height="23" Margin="0,100,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btOpenNew" Content="Button" HorizontalAlignment="Center" Margin="0,350,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button x:Name="bt0" Content="0" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="90" Height="40" Click="Number_Click"/>
+        <Button x:Name="btDot" Content="." HorizontalAlignment="Left" Margin="110,0,0,10" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click"/>
+        <Button x:Name="bt1" Content="1" HorizontalAlignment="Left" Margin="10,0,0,60" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click"/>
+        <Button x:Name="bt2" Content="2" HorizontalAlignment="Left" Margin="60,0,0,60" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click"/>
+        <Button x:Name="bt3" Content="3" HorizontalAlignment="Left" Margin="110,0,0,60" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click"/>
+        <Button x:Name="bt4" Content="4" HorizontalAlignment="Left" Margin="10,0,0,110" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click"/>
+        <Button x:Name="bt5" Content="5" HorizontalAlignment="Left" Margin="60,0,0,110" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click"/>
+        <Button x:Name="bt6" Content="6" HorizontalAlignment="Left" Margin="110,0,0,110" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click"/>
+        <Button x:Name="bt7" Content="7" HorizontalAlignment="Left" Margin="10,0,0,160" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click"/>
+        <Button x:Name="bt8" Content="8" HorizontalAlignment="Left" Margin="60,0,0,160" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click"/>
+        <Button x:Name="bt9" Content="9" HorizontalAlignment="Left" Margin="110,0,0,160" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click"/>
 
+        <Button x:Name="btPlus" Content="+" HorizontalAlignment="Left" Margin="160,0,0,10" VerticalAlignment="Bottom" Width="40" Height="40" Click="ForthRule_Click"/>
+        <Button x:Name="btMinus" Content="-" HorizontalAlignment="Left" Margin="160,0,0,60" VerticalAlignment="Bottom" Width="40" Height="40" Click="ForthRule_Click"/>
+        <Button x:Name="btMulti" Content="*" HorizontalAlignment="Left" Margin="160,0,0,110" VerticalAlignment="Bottom" Width="40" Height="40" Click="ForthRule_Click"/>
+        <Button x:Name="btDivi" Content="/" HorizontalAlignment="Left" Margin="160,0,0,160" VerticalAlignment="Bottom" Width="40" Height="40" Click="ForthRule_Click"/>
+        <Button x:Name="btResult" Content="=" HorizontalAlignment="Left" Margin="210,0,0,10" VerticalAlignment="Bottom" Width="40" Height="90" Click="Result_Click"/>
+        <Button x:Name="btReset" Content="C" HorizontalAlignment="Left" Margin="210,0,0,110" VerticalAlignment="Bottom" Width="40" Height="40" Click="Reset_Click"/>
+
+        <TextBlock x:Name="tbCal"  HorizontalAlignment="Left" Margin="10,0,0,210" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="240" Height="50"/>
+        <TextBlock x:Name="tbResult"  HorizontalAlignment="Left" Margin="10,0,0,270" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="240" Height="50" FontSize="30" FontWeight="Bold"/>
     </Grid>
 </Window>

@@ -20,6 +20,11 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        string preNumStr ="";
+        string nowNumStr = "";
+        float result = 0;
+        float preResult = 0;
+        char preOperator = '0';
         public MainWindow()
         {
             InitializeComponent();
@@ -27,33 +32,86 @@ namespace WpfApp1
             
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Number_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
-        }
-
-        private void BtChange_Click(object sender, RoutedEventArgs e)
-        {
-            this.btChange.Content = "눌렀다!";
-        }
-
-        private void BtEnter_Click(object sender, RoutedEventArgs e)
-        {
-            this.btEnter.Content = this.tbName.Text;
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            TestWindow window = new TestWindow();
-            bool? check = window.ShowDialog();//show는 새창 show dialog는 종속]
-            if (check==true)
+            Button btn = (Button)sender;
+            if (preOperator == '0')
             {
-                this.tbName.Text = window.btName.Content.ToString();
+                nowNumStr += btn.Content.ToString();
+                result = float.Parse(nowNumStr);
+                this.tbResult.Text = (result).ToString();
             }
-            else
+            else if (preOperator == '+')
             {
+                nowNumStr += btn.Content.ToString();
+                result = preResult+float.Parse(nowNumStr);
+                this.tbCal.Text += btn.Content.ToString();
+                this.tbResult.Text = (result).ToString();
             }
-            
+            else if (preOperator == '-')
+            {
+                nowNumStr += btn.Content.ToString();
+                result = preResult - float.Parse(nowNumStr);
+                this.tbCal.Text += btn.Content.ToString();
+                this.tbResult.Text = (result).ToString();
+            }
+            else if (preOperator == '*')
+            {
+                nowNumStr += btn.Content.ToString();
+                result = preResult * float.Parse(nowNumStr);
+                this.tbCal.Text += btn.Content.ToString();
+                this.tbResult.Text = (result).ToString();
+            }
+            else if (preOperator == '/')
+            {
+                nowNumStr += btn.Content.ToString();
+                result = preResult / float.Parse(nowNumStr);
+                this.tbCal.Text += btn.Content.ToString();
+                this.tbResult.Text = (result).ToString();
+            }
+
+        }
+
+        private void ForthRule_Click(object sender, RoutedEventArgs e)
+        {
+            preNumStr = nowNumStr;
+            nowNumStr = "";
+            Button btn = (Button)sender;
+            preOperator = btn.Content.ToString()[0];
+            if(tbCal.Text == "") {
+                if(result == 0)
+                {
+                    this.tbCal.Text += "0 " + btn.Content.ToString() +" ";
+                }
+                else { this.tbCal.Text += result.ToString() + " " + btn.Content.ToString() + " "; }
+            }else if(preNumStr == "")
+            {
+                this.tbCal.Text += "0 " + btn.Content.ToString() + " ";
+            } else
+            {
+                this.tbCal.Text += " " + btn.Content.ToString() + " ";
+            }
+            preResult = result;
+        }
+        private void Result_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            this.tbCal.Text = "";
+            preResult = result;
+            preNumStr = "";
+            nowNumStr = "";
+            preOperator = '0';
+        }
+        private void Reset_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            preOperator = '0';
+            this.tbResult.Text = "";
+            this.tbCal.Text = "";
+            preNumStr = "";
+            nowNumStr = "";
+            preResult = 0;
+            result = 0;
         }
     }
 }
