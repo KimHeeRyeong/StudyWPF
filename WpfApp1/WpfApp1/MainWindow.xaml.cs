@@ -20,99 +20,77 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        string preNumStr ="";
-        string nowNumStr = "";
+        float nowNum = 0;
         float result = 0;
-        float preResult = 0;
         char preOperator = '0';
+
         public MainWindow()
         {
             InitializeComponent();
-
-            
         }
 
         private void Number_Click(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-            if (preOperator == '0')
+            if(nowNum == 0)
             {
-                
-                nowNumStr += btn.Content.ToString();
-                result = float.Parse(nowNumStr);
-                this.tbResult.Text = (result).ToString();
+                this.tbResult.Text = btn.Content.ToString();
+                nowNum = float.Parse(this.tbResult.Text);
             }
-            else if (preOperator == '+')
+            else
             {
-                nowNumStr += btn.Content.ToString();
-                result = preResult+float.Parse(nowNumStr);
-                this.tbCal.Text += btn.Content.ToString();
-                this.tbResult.Text = (result).ToString();
+                this.tbResult.Text += btn.Content.ToString();
+                nowNum = float.Parse(this.tbResult.Text);
             }
-            else if (preOperator == '-')
-            {
-                nowNumStr += btn.Content.ToString();
-                result = preResult - float.Parse(nowNumStr);
-                this.tbCal.Text += btn.Content.ToString();
-                this.tbResult.Text = (result).ToString();
-            }
-            else if (preOperator == '*')
-            {
-                nowNumStr += btn.Content.ToString();
-                result = preResult * float.Parse(nowNumStr);
-                this.tbCal.Text += btn.Content.ToString();
-                this.tbResult.Text = (result).ToString();
-            }
-            else if (preOperator == '/')
-            {
-                nowNumStr += btn.Content.ToString();
-                result = preResult / float.Parse(nowNumStr);
-                this.tbCal.Text += btn.Content.ToString();
-                this.tbResult.Text = (result).ToString();
-            }
-
         }
-
         private void ForthRule_Click(object sender, RoutedEventArgs e)
         {
-            preNumStr = nowNumStr;
-            nowNumStr = "";
+            Calculate();
             Button btn = (Button)sender;
             preOperator = btn.Content.ToString()[0];
-            if(tbCal.Text == "") {
-                if(result == 0)
-                {
-                    this.tbCal.Text += "0 " + btn.Content.ToString() +" ";
-                }
-                else { this.tbCal.Text += result.ToString() + " " + btn.Content.ToString() + " "; }
-            }else if(preNumStr == "")
-            {
-                this.tbCal.Text += "0 " + btn.Content.ToString() + " ";
-            } else
-            {
-                this.tbCal.Text += " " + btn.Content.ToString() + " ";
-            }
-            preResult = result;
+
+            tbCal.Text += tbResult.Text + btn.Content.ToString();
+            nowNum = 0;
         }
         private void Result_Click(object sender, RoutedEventArgs e)
         {
-            Button btn = (Button)sender;
+            Calculate();
+            this.tbResult.Text = result.ToString();
             this.tbCal.Text = "";
-            preResult = result;
-            preNumStr = "";
-            nowNumStr = "";
             preOperator = '0';
+            nowNum = 0;
         }
         private void Reset_Click(object sender, RoutedEventArgs e)
         {
-            Button btn = (Button)sender;
             preOperator = '0';
             this.tbResult.Text = "0";
             this.tbCal.Text = "";
-            preNumStr = "";
-            nowNumStr = "";
-            preResult = 0;
+            nowNum = 0;
             result = 0;
         }
+
+        private void Calculate() {
+            if (preOperator == '0')
+            {
+                result += nowNum;
+            }
+            else if (preOperator == '+')
+            {
+                result += nowNum;
+            }
+            else if (preOperator == '-')
+            {
+                result -= nowNum;
+            }
+            else if (preOperator == '*')
+            {
+                result *= nowNum;
+            }
+            else if (preOperator == '/')
+            {
+                result /= nowNum;
+            }
+        }
+       
     }
 }

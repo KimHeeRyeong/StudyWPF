@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="계산기" Height="360" Width="270">
     <Grid Background="#FFD9E4F1">
-        
-        <Button x:Name="btDot" Content="." HorizontalAlignment="Left" Margin="110,0,0,10" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="5">
+
+        <Button Content="." HorizontalAlignment="Left" Margin="110,0,0,10" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFF9F9F8" Offset="0"/>
@@ -17,7 +17,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="bt0" Content="0" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="90" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="5">
+        <Button Content="0" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="90" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFF9F9F8" Offset="0"/>
@@ -26,7 +26,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="bt1" Content="1" HorizontalAlignment="Left" Margin="10,0,0,60" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="5">
+        <Button x:Name="bt1" Content="1" HorizontalAlignment="Left" Margin="10,0,0,60" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFF9F9F8" Offset="0"/>
@@ -35,7 +35,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="bt2" Content="2" HorizontalAlignment="Left" Margin="60,0,0,60" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="5">
+        <Button Content="2" HorizontalAlignment="Left" Margin="60,0,0,60" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFF9F9F8" Offset="0"/>
@@ -44,7 +44,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="bt3" Content="3" HorizontalAlignment="Left" Margin="110,0,0,60" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="5">
+        <Button Content="3" HorizontalAlignment="Left" Margin="110,0,0,60" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFF9F9F8" Offset="0"/>
@@ -53,7 +53,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="bt4" Content="4" HorizontalAlignment="Left" Margin="10,0,0,110" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="5">
+        <Button Content="4" HorizontalAlignment="Left" Margin="10,0,0,110" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFF9F9F8" Offset="0"/>
@@ -62,7 +62,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="bt5" Content="5" HorizontalAlignment="Left" Margin="60,0,0,110" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="5">
+        <Button Content="5" HorizontalAlignment="Left" Margin="60,0,0,110" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFF9F9F8" Offset="0"/>
@@ -71,7 +71,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="bt6" Content="6" HorizontalAlignment="Left" Margin="110,0,0,110" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="5">
+        <Button Content="6" HorizontalAlignment="Left" Margin="110,0,0,110" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFF9F9F8" Offset="0"/>
@@ -80,7 +80,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="bt7" Content="7" HorizontalAlignment="Left" Margin="10,0,0,160" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="5">
+        <Button Content="7" HorizontalAlignment="Left" Margin="10,0,0,160" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFF9F9F8" Offset="0"/>
@@ -89,7 +89,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="bt8" Content="8" HorizontalAlignment="Left" Margin="60,0,0,160" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="5">
+        <Button Content="8" HorizontalAlignment="Left" Margin="60,0,0,160" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFF9F9F8" Offset="0"/>
@@ -98,7 +98,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="bt9" Content="9" HorizontalAlignment="Left" Margin="110,0,0,160" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="5">
+        <Button Content="9" HorizontalAlignment="Left" Margin="110,0,0,160" VerticalAlignment="Bottom" Width="40" Height="40" Click="Number_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFF9F9F8" Offset="0"/>
@@ -108,7 +108,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="btPlus" Content="+" HorizontalAlignment="Left" Margin="160,0,0,10" VerticalAlignment="Bottom" Width="40" Height="40" Click="ForthRule_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="5">
+        <Button Content="+" HorizontalAlignment="Left" Margin="160,0,0,10" VerticalAlignment="Bottom" Width="40" Height="40" Click="ForthRule_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF0F3F6" Offset="0.013"/>
@@ -117,7 +117,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="btMinus" Content="-" HorizontalAlignment="Left" Margin="160,0,0,60" VerticalAlignment="Bottom" Width="40" Height="40" Click="ForthRule_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="5">
+        <Button Content="-" HorizontalAlignment="Left" Margin="160,0,0,60" VerticalAlignment="Bottom" Width="40" Height="40" Click="ForthRule_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF0F3F6" Offset="0.013"/>
@@ -126,7 +126,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="btMulti" Content="*" HorizontalAlignment="Left" Margin="160,0,0,110" VerticalAlignment="Bottom" Width="40" Height="40" Click="ForthRule_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="5">
+        <Button Content="*" HorizontalAlignment="Left" Margin="160,0,0,110" VerticalAlignment="Bottom" Width="40" Height="40" Click="ForthRule_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF0F3F6" Offset="0.013"/>
@@ -135,7 +135,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="btDivi" Content="/" HorizontalAlignment="Left" Margin="160,0,0,160" VerticalAlignment="Bottom" Width="40" Height="40" Click="ForthRule_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="5">
+        <Button x:Name="btDivi" Content="/" HorizontalAlignment="Left" Margin="160,0,0,160" VerticalAlignment="Bottom" Width="40" Height="40" Click="ForthRule_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF0F3F6" Offset="0.013"/>
@@ -144,7 +144,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="btResult" Content="=" HorizontalAlignment="Left" Margin="210,0,0,10" VerticalAlignment="Bottom" Width="40" Height="90" Click="Result_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="5">
+        <Button Content="=" HorizontalAlignment="Left" Margin="210,0,0,10" VerticalAlignment="Bottom" Width="40" Height="90" Click="Result_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontWeight="Bold" FontSize="20" BorderThickness="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF0F3F6" Offset="0.013"/>
@@ -153,7 +153,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="btReset" Content="C" HorizontalAlignment="Left" Margin="210,0,0,110" VerticalAlignment="Bottom" Width="40" Height="40" Click="Reset_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="5">
+        <Button Content="C" HorizontalAlignment="Left" Margin="210,0,0,110" VerticalAlignment="Bottom" Width="40" Height="40" Click="Reset_Click" BorderBrush="#FF0D50C7" Foreground="#FF30578F" FontSize="20" BorderThickness="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF0F3F6" Offset="0.013"/>
