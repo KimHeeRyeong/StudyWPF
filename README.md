@@ -4,5 +4,5 @@ Study WPF
 ###1.Hello, WPF!
 [WPF tutorial](https://wpf-tutorial.com/getting-started/hello-wpf/)
 ###2.Calculator
-![Calculator](./ReadMe/Calculator.png)
+![Calculator](/ReadMe/Calculator.png)
 <hr/>
