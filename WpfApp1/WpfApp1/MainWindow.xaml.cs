@@ -32,7 +32,10 @@ namespace WpfApp1
         private void Number_Click(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-            if(nowNum == 0)
+            if (preOperator == '=')
+            {
+                preOperator = '0';
+            }if (nowNum == 0)
             {
                 this.tbResult.Text = btn.Content.ToString();
                 nowNum = float.Parse(this.tbResult.Text);
@@ -49,7 +52,7 @@ namespace WpfApp1
             Button btn = (Button)sender;
             preOperator = btn.Content.ToString()[0];
 
-            tbCal.Text += tbResult.Text + btn.Content.ToString();
+            tbCal.Text += nowNum.ToString()+ btn.Content.ToString();
             nowNum = 0;
         }
         private void Result_Click(object sender, RoutedEventArgs e)
@@ -57,7 +60,7 @@ namespace WpfApp1
             Calculate();
             this.tbResult.Text = result.ToString();
             this.tbCal.Text = "";
-            preOperator = '0';
+            preOperator = '=';
             nowNum = 0;
         }
         private void Reset_Click(object sender, RoutedEventArgs e)
@@ -72,7 +75,7 @@ namespace WpfApp1
         private void Calculate() {
             if (preOperator == '0')
             {
-                result += nowNum;
+                result = nowNum;
             }
             else if (preOperator == '+')
             {
@@ -90,6 +93,11 @@ namespace WpfApp1
             {
                 result /= nowNum;
             }
+            else if(preOperator == '=')
+            {
+                nowNum = result;
+            }
+
         }
        
     }
